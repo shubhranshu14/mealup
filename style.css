@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital@1&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.in-block {
+  display: inline-block;
+}
+.flex {
+  display: flex;
+}
+.al-c {
+  align-items: center;
+}
+.js-sb {
+  justify-content: space-between;
+}
+
+.s-nav {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #e5eeb7;
+}
+.title {
+  font-family: "Shantell Sans", cursive;
+  align-self: center;
+}
+.title span {
+  font-weight: bold;
+}
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+.main {
+  background-color: white;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  top: -20px;
+  padding-top: 30px;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.main div input,
+.main div select {
+  width: min-content;
+}
+.main button {
+  margin-inline: 35px;
+}
+.meal-container {
+  width: 100%;
+  display: flex;
+  gap: 50%;
+  top: 50px;
+  position: relative;
+  padding: 20px 80px;
+  overflow-x: scroll;
+  background-size: contain;
+}
+.meal-box {
+  text-align: center;
+  font-family: "Shantell Sans", cursive;
+}
+.meal-card {
+  width: 220px;
+  height: 315px;
+  position: relative;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: #e5eeb7df;
+  border-radius: 10px;
+}
+
+.meal-img {
+  width: 216px;
+}
+.meal-img img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  object-fit: contain;
+}
+.meal-details {
+  text-align: center;
+}
+.meal-card button {
+  position: absolute;
+  bottom: 0px;
+  width: 125px;
+  left: 12px;
+}
+.holder {
+  display: flex;
+  flex-direction: column;
+}
+.ask {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  left: 25px;
+  position: relative;
+  width: calc(100% - 50px);
+  height: 150px;
+  background-color: #f4c6c6;
+}
+.ask h3 {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+/*****recipe****/
+.hidden {
+  display: none;
+}
+.noscroll {
+  overflow-y: hidden;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+.recipe-container {
+  position: fixed;
+  left: 25px;
+  height: 570px;
+  background-image: url("./img/recipe.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: calc(100% - 50px);
+  box-shadow: 0 0 10px;
+  z-index: 2;
+  top: 60px;
+  padding: 10px;
+}
+.recipe-container h4 {
+  text-align: center;
+}
+#ingri_btn,
+#recipe_btn {
+  position: relative;
+  top: -80px;
+  border: none;
+  background-color: transparent;
+}
+footer {
+  position: relative;
+  bottom: -28px;
+  margin: 0 0 45px 10px;
+}
+footer p {
+  font-size: 12px;
+  color: #6e6e6e;
+}
+.recipe-step {
+  text-align: justify;
+  height: 490px;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 5px 10px;
+  font-weight: 500;
+  overflow-y: scroll;
+}
+.ingre-step {
+  text-align: center;
+  height: 490px;
+  list-style: none;
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 14px;
+  overflow-y: scroll;
+}
+.fa-close {
+  position: absolute;
+  top: -30px;
+  left: 96%;
+  font-size: 1.5em;
+}
+
+@media (min-width: 480px) {
+  .meal-container {
+    gap: 0;
+    overflow-x: hidden;
+    justify-content: space-around;
+  }
+  .meal-img {
+    width: 100%;
+  }
+  .s-nav {
+    padding: 0 40px;
+  }
+  .holder {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+  .ask {
+    width: 300px;
+    height: 383px;
+  }
+  .recipe-container {
+    left: 300px;
+    width: calc(100% - 600px);
+    background-size: cover;
+  }
+  .recipe-step {
+    font-size: 16px;
+  }
+  .recipe-step::-webkit-scrollbar {
+    display: none;
+  }
+  .ingre-step {
+    font-size: 16px;
+  }
+  .ingre-step::-webkit-scrollbar {
+    display: none;
+  }
+  .recipe-container h4 {
+    font-size: 26px;
+  }
+}

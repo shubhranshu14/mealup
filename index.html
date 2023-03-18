@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./assets/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Meal Up</title>
+  </head>
+
+  <body>
+    <div class="s-nav">
+      <div class="title">
+        <h2>Hey There,</h2>
+        <p>Plane your meal with <span>Meal Up</span></p>
+      </div>
+
+      <img class="logo" src="./img/logo.jpg" alt="logo" />
+    </div>
+    <div class="main">
+      <div class="holder">
+        <div class="ask">
+          <h3>Provide us your details and get your daily planned meal</h3>
+          <div>
+            <img width="50px" src="./img/cook1.jpg" />
+            <img width="50px" src="./img/cook2.jpg" />
+          </div>
+        </div>
+        <div class="form-container">
+          <form>
+            <div class="form-floating mb-3">
+              <input
+                id="height"
+                class="form-control"
+                type="number"
+                placeholder="Enter your Height"
+                required
+              />
+              <label for="height">Enter your Height (cm)</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                id="weight"
+                class="form-control"
+                type="number"
+                placeholder="Enter your Weight"
+                required
+              />
+              <label for="weight">Enter your Weight (Kg)</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                id="age"
+                class="form-control"
+                type="number"
+                placeholder="Enter your Age"
+                required
+              />
+              <label for="age">Enter your Age</label>
+            </div>
+            <div class="flex al-c js-sb mb-3">
+              <label for="gender" class="form-label">Gender</label>
+              <select id="gender" class="form-select">
+                <option selected>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+            <div class="flex al-c js-sb mb-3">
+              <label for="activity" class="form-label">Activity Level</label>
+              <select id="activity" class="form-select">
+                <option selected>Light</option>
+                <option>Medium</option>
+                <option>High</option>
+              </select>
+            </div>
+            <button type="button" id="generate" class="btn btn-primary">
+              Generate Meals
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="meal-container"></div>
+    </div>
+    <div class="overlay hidden"></div>
+    <div id="recipe-container" class="recipe-container hidden">
+      <h4>Recipe</h4>
+      <button id="ingri_btn">See Ingredients</button>
+      <i class="fa fa-close" style="font-size: 24px"></i>
+      <div class="recipe-step"></div>
+    </div>
+    <div id="ingredient-container" class="recipe-container hidden">
+      <h4>Ingredients</h4>
+      <button id="recipe_btn">See Recipe</button>
+      <i class="fa fa-close" style="font-size: 24px"></i>
+      <div class="ingre-step"></div>
+    </div>
+    <footer>
+      <p>Copyright &copy; MealUp|Shubhranshu. All rights reserved.</p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
